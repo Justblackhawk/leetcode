@@ -14,13 +14,14 @@ func strStr(haystack string, needle string) int {
 		return 0
 	}
 	lengthNeedle := len(needle)
-	for i := 0; i < len(haystack)-lengthNeedle; i++ {
+	for i := 0; i <= len(haystack)-lengthNeedle; i++ {
 		if haystack[i:i+lengthNeedle] == needle {
 			return i
 		}
 	}
-	return 0
+	return -1
 }
 func main() {
 	fmt.Printf("%d", strStr("sajeee", "aa"))
 }
+
