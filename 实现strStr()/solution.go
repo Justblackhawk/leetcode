@@ -15,6 +15,7 @@ func strStr(haystack string, needle string) int {
 	}
 	lengthNeedle := len(needle)
 	for i := 0; i <= len(haystack)-lengthNeedle; i++ {
+		//fmt.Println(string(haystack[i]))  go range string
 		if haystack[i:i+lengthNeedle] == needle {
 			return i
 		}
